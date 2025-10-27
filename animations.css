@@ -1,0 +1,74 @@
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeInDown {
+  from { 
+    opacity: 0; 
+    transform: translateY(-50px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    transform: scale(0.9); 
+    opacity: 0; 
+  }
+  to { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes countUp {
+  from { 
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-number.counting {
+  animation: countUp 1s ease-out forwards;
+}
+
+.modal.active .modal-content {
+  animation: scaleIn 0.3s ease forwards;
+}
+
+.home-image h1 {
+  animation: fadeInDown 1s ease-out;
+}
+
+.home-content h1 {
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.home-content p {
+  animation: fadeIn 1s ease-out 0.6s both;
+}

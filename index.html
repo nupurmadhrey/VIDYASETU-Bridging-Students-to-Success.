@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidyasetu — V1.2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Vidyasetu</div>
+    <nav>
+      <a href="#" class="nav-link active" data-section="home">Home</a>
+      <a href="#" class="nav-link" data-section="about">About</a>
+      <a href="#" class="nav-link" data-section="courses">All Exams</a>
+      <a href="#" class="nav-link" data-section="timetable">My Timetable</a>
+      <a href="#" id="loginBtn">Login</a>
+    </nav>
+  </header>
+
+  <section id="home" class="active">
+    <div class="home-container">
+      <div class="home-image">
+        <h1>Vidyasetu</h1>
+      </div>
+      <div class="home-content">
+        <h1>Welcome to Vidyasetu</h1>
+        <p>Centralized platform for government exam dates, resources & personalized timetables.</p>
+        <button class="btn btn-primary" onclick="showSection('courses')">Explore Exams</button>
+      </div>
+      
+      <div class="features">
+        <h2>Why Choose Vidyasetu?</h2>
+        <div class="features-grid">
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3>Exam Calendar</h3>
+            <p>Never miss an important exam date with our comprehensive calendar.</p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Study Resources</h3>
+            <p>Access curated study materials and previous year question papers.</p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Performance Tracking</h3>
+            <p>Monitor your progress with detailed analytics and insights.</p>
+          </div>
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3>Smart Notifications</h3>
+            <p>Get timely alerts for exam updates, deadlines, and new resources.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="stats">
+        <h2>Our Impact</h2>
+        <div class="stats-grid">
+          <div class="stat-item animate-on-scroll">
+            <div class="stat-number" data-count="50">0</div>
+            <div class="stat-label">Exams Covered</div>
+          </div>
+          <div class="stat-item animate-on-scroll">
+            <div class="stat-number" data-count="10000">0</div>
+            <div class="stat-label">Active Users</div>
+          </div>
+          <div class="stat-item animate-on-scroll">
+            <div class="stat-number" data-count="95">0</div>
+            <div class="stat-label">Success Rate</div>
+          </div>
+          <div class="stat-item animate-on-scroll">
+            <div class="stat-number" data-count="500">0</div>
+            <div class="stat-label">Study Resources</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta">
+        <h2>Start Your Preparation Today</h2>
+        <p>Join thousands of aspirants who have achieved their dream government jobs with Vidyasetu</p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary" onclick="showSection('courses')">Create Account</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-content">
+      <h1>About Vidyasetu</h1>
+      <p>We bring all government exam updates into one place, helping aspirants prepare with ease.</p>
+      <div class="features">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Our Mission</h3>
+            <p>To simplify exam preparation for government job aspirants by providing all necessary resources in one platform.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Our Vision</h3>
+            <p>To become the most trusted platform for government exam preparation in India.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="section-content">
+      <h1>All Exams</h1>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="all">All Exams</button>
+        <button class="tab-btn" data-tab="after12">Post Intermediate</button>
+        <button class="tab-btn" data-tab="afterGrad">Post Graduation</button>
+        <button class="tab-btn" data-tab="defence">Defence & Armed Forces</button>
+      </div>
+
+      <div class="main">
+        <aside class="sidebar">
+          <input type="text" placeholder="Search exams..." class="search-input" id="searchInput" />
+          <div class="filter-group">
+            <label><input type="checkbox" value="All India" /> All India</label><br/>
+            <label><input type="checkbox" value="State" /> State Level</label>
+          </div>
+          <select id="stateDropdown">
+            <option value="">-- Select State --</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Karnataka">Karnataka</option>
+          </select>
+        </aside>
+
+        <section class="content" id="examContainer">
+          <div class="exam-card" data-tags="All India after12">
+            <h4>NEET</h4>
+            <p>Medical entrance exam</p>
+            <button>I want to prepare</button>
+          </div>
+          <div class="exam-card" data-tags="State Maharashtra afterGrad">
+            <h4>MPSC</h4>
+            <p>Maharashtra Public Service Commission</p>
+            <button>I want to prepare</button>
+          </div>
+          <div class="exam-card" data-tags="All India afterGrad">
+            <h4>UPSC</h4>
+            <p>Civil Services Exam</p>
+            <button>I want to prepare</button>
+          </div>
+          <div class="exam-card" data-tags="Defence All India after12">
+            <h4>NDA</h4>
+            <p>National Defence Academy</p>
+            <button>I want to prepare</button>
+          </div>
+          <div class="exam-card" data-tags="All India after12">
+            <h4>JEE</h4>
+            <p>Engineering entrance exam</p>
+            <button>I want to prepare</button>
+          </div>
+          <div class="exam-card" data-tags="State Uttar Pradesh afterGrad">
+            <h4>UPPCS</h4>
+            <p>Uttar Pradesh Public Service Commission</p>
+            <button>I want to prepare</button>
+          </div>
+          <div class="exam-card" data-tags="All India afterGrad">
+            <h4>SSC CGL</h4>
+            <p>Staff Selection Commission</p>
+            <button>I want to prepare</button>
+          </div>
+          <div class="exam-card" data-tags="State Telangana afterGrad">
+            <h4>TSPSC</h4>
+            <p>Telangana State Public Service Commission</p>
+            <button>I want to prepare</button>
+          </div>
+          <div class="exam-card" data-tags="Defence All India afterGrad">
+            <h4>AFCAT</h4>
+            <p>Air Force Common Admission Test</p>
+            <button>I want to prepare</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section id="timetable">
+    <div class="section-content">
+      <h1>My Timetable</h1>
+      <p>Login to view or create your personalized timetable.</p>
+      <div class="features">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-calendar-plus"></i>
+            </div>
+            <h3>Create Schedule</h3>
+            <p>Plan your study schedule based on exam dates and your preparation level.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3>Get Reminders</h3>
+            <p>Receive notifications for upcoming exams and study sessions.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3>Track Progress</h3>
+            <p>Monitor your preparation progress and adjust your schedule accordingly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <h2>Login</h2>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button class="btn btn-primary" style="width:100%;margin-top:0.5rem;">Login</button>
+    </div>
+  </div>
+
+  <script src="scripts/navigation.js"></script>
+  <script src="scripts/filter.js"></script>
+  <script src="scripts/animations.js"></script>
+</body>
+</html>
